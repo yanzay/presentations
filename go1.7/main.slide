@@ -1,0 +1,177 @@
+What's new in Go 1.7
+Kyiv Go Meetup
+17 Aug 2016
+
+Alexey Grachov
+Go Engeneer, Cogniance
+grachov.alexey@gmail.com
+https://yanzay.com
+@yanzay
+
+* Agenda
+
+- Language changes
+- Platforms
+- Tools
+- Performance
+- Stdlib
+- Han
+
+* Release notes
+
+.link https://golang.org/doc/go1.7
+
+* Go 1 promise of compatibility
+
+.link https://golang.org/doc/go1compat
+
+* Language changes
+
+No
+
+* Platforms
+
+- macOS 10.12 Sierra (backported to Go 1.6.3)
+
+Experimental:
+
+- Linux on z Systems (IBM mainframes)
+- Plan 9 on ARM
+
+Full support for cgo:
+
+- Linux on 64-bit MIPS
+
+Known issues:
+
+- FreeBSD crashes
+
+* Tools
+
+* Compiler
+
+- New code generation back end - SSA (amd64)
+- 5-35% less CPU time
+- Binaries smaller by 20-30%
+
+* Compiler
+
+.image ethereum.jpg-large _ 500
+
+* Cgo
+
+Fortran support
+
+* Go command
+
+- No GO15VENDOREXPERIMENT
+- go get git.openstack.org
+
+* Go vet
+
+Improved:
+
+- -copylock
+- -printf
+
+New:
+
+- -tests
+- -lostcancel (for context)
+
+* Go tool dist
+
+List of supported operating system/architecture pairs
+
+  $ go tool dist list
+
+  android/386
+  android/amd64
+  android/arm
+  android/arm64
+  darwin/386
+  darwin/amd64
+  darwin/arm
+  darwin/arm64
+  dragonfly/amd64
+  freebsd/386
+  freebsd/amd64
+  freebsd/arm
+  linux/386
+  linux/amd64
+  linux/arm
+  linux/arm64
+  linux/mips64
+
+* Go tool dist
+
+  linux/mips64le
+  linux/ppc64
+  linux/ppc64le
+  linux/s390x
+  nacl/386
+  nacl/amd64p32
+  nacl/arm
+  netbsd/386
+  netbsd/amd64
+  netbsd/arm
+  openbsd/386
+  openbsd/amd64
+  openbsd/arm
+  plan9/386
+  plan9/amd64
+  plan9/arm
+  solaris/amd64
+  windows/386
+  windows/amd64
+
+* Go tool trace
+
+Overhead decreased from 400% to 25%
+
+* Performance
+
+- On x86-64 "significantly faster" (SSA)
+- Faster GC
+
+Optimizations of stdlib:
+
+- crypto/sha1
+- crypto/sha256
+- encoding/binary
+- fmt
+- hash/crc32
+- math/big
+- strconv
+- strings
+
+* Stdlib
+
+* Context
+
+  mv golang.org/x/net/context context
+
+Integration with:
+
+- net
+- net/http
+- os/exec
+
+.link https://blog.golang.org/context
+
+* HTTP tracing
+
+  net/http/httptrace
+
+* Testing
+
+- Sub-tests and sub-benchmarks
+- TestMain
+
+.code testmain.go
+
+* Han
+
+.play han.go
+
+Also some troubles with SSA

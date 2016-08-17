@@ -1,0 +1,227 @@
+Introduction to Go
+Kyiv Go Meetup
+17 Jun 2016
+
+Alexey Grachov
+Go Engeneer, Cogniance
+grachov.alexey@gmail.com
+https://github.com/yanzay
+@yanzay
+
+* Agenda
+- About Go
+- Hello, World!
+- Control Structures
+- Basic Data Types
+- Composite Types
+- Structs
+- Interfaces
+- Goroutines and Channels
+- Tools
+- How to start
+.caption Don't panic
+
+* Go Users
+
+.image docker-friends.png 500 _
+
+* Go Users
+- Google
+- Basecamp
+- DigitalOcean
+- Docker
+- Dropbox
+- eBay
+- Facebook
+- GitHub
+- Netflix
+- SpaceX
+- Twitter
+- Uber
+: And many many others
+
+* About Go
+.image gopher.png 500 _
+
+* About Go
+.background gofast.png
+- C-like Syntax
+- Simple (25 keywords)
+: Python: 33, Ruby: 42, Java: 50, C++: 82
+- Fast
+- Static Typing
+- Garbage Collection
+- Strict
+- Compilation
+- Cross-compilation
+- Great tooling
+.caption Cgo is not Go
+
+* What's missing
+
+.image gopherbw.png 500 _
+
+* What's missing
+- Generics
+- Exceptions
+- "Classic" OOP
+.caption Clear is better than clever
+: No classes, no inheritance, interfaces, embedding (Composition over inheritance)
+
+* Hello, World!
+.play hello.go
+
+* Control Structures
+- If
+
+  if a > b {
+    f()
+  }
+
+- For
+
+  for i := 0; i < 100; i++ {
+    doWork()
+  }
+
+- Switch
+
+  switch foo {
+  case 0: fmt.Println("Haha!")
+  default: fmt.Println("Error!")
+  }
+
+- Select
+
+* Basic Data Types
+
+- Boolean
+  bool
+- Numeric
+  uint8-uint64, int8-int64, float32-float64, complex64-complex128, byte, rune
+- String
+  string
+
+* Composite Types
+- array
+  var arr = [2]int
+  arr[0] = 1
+  arr[1] = 2
+- slice
+  arr := []int{1, 2}
+- map
+  m := map[string]string{"Foo": "Bar", "Baz": "Fiz"}
+- channel
+- struct
+
+* Arrays and Slices
+Slice:
+
+- Pointer to array
+- Length
+- Capacity
+
+.image go-slices.png
+
+* Structs
+
+.play structs.go /START OMIT/,/END OMIT/
+
+* Interfaces
+
+.play interface.go /START OMIT/,/END OMIT/
+.caption The bigger the interface, the weaker the abstraction
+
+* Goroutines
+
+.image gophercomplex1.jpg _ 800
+.caption Concurrency is not parallelism
+
+* Goroutines
+
+.play goroutines0.go /START OMIT/,/END OMIT/
+.caption Concurrency is not parallelism
+
+* Goroutines and Channels - Synchronization
+
+.play goroutines1.go /START OMIT/,/END OMIT/
+.caption Channels orchestrate; mutexes serialize
+
+* Goroutines and Channels - Communication
+
+.play goroutines2.go /START OMIT/,/END OMIT/
+.caption Channels orchestrate; mutexes serialize
+
+* Bufferred Channels
+
+.play bufchannel.go /START OMIT/,/END OMIT/
+.caption Don't communicate by sharing memory, share memory by communicating
+
+* Select
+
+.play select.go /START OMIT/,/END OMIT/
+.caption Errors are values
+
+* Tools
+
+.image gopherswrench.jpg 500 _
+
+* Tools
+
+- go fmt
+- goimports
+- go tool pprof
+- go test
+- go test -bench
+- race detector
+- ...
+- present
+.caption Gofmt's style is no one's favorite, yet gofmt is everyone's favorite
+
+* Missing Tools
+
+- IDE (vim, sublime, atom, VS code, IDEA)
+- Debugger (gdb, delve)
+- Dependency Management (godeps, glide)
+.caption A little copying is better than a little dependency
+
+* How to start
+
+.image gostart.png 500 _
+
+* How to start
+
+- A tour of Go
+
+.link https://tour.golang.org
+
+- Effective Go
+
+.link https://golang.org/doc/effective_go.html
+
+- Specification
+
+.link http://golang.org/ref/spec
+
+- The Go Programming Language. Alan Donovan, Brian Kernighan
+
+.link http://gopl.io
+
+* Community
+
+Slack
+
+- [[http://4gophers.com/slack]]
+
+Podcasts
+
+- [[http://golangshow.com][Golang Show (RU)]]
+- [[https://changelog.com/gotime][Go Time (EN)]]
+
+Facebook
+
+- [[https://www.facebook.com/groups/GolangUA][GolangUA]]
+
+* Questions?
+.image gopher_coffee.jpg 500 _
+
