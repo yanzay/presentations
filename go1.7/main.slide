@@ -209,6 +209,7 @@ Available mechanism to trace the events within HTTP client requests
 Also some troubles with SSA
 .link https://github.com/golang/go/issues/16733
 .link https://github.com/golang/go/issues/16726
+.link https://github.com/golang/go/issues/16804
 
 Waiting for [[https://github.com/golang/go/milestone/44][Go 1.7.1]]
 
