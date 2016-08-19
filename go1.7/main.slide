@@ -20,6 +20,8 @@ https://yanzay.com
 
 .link https://golang.org/doc/go1.7
 
+.image lorem.png
+
 * Go 1 promise of compatibility
 
 .link https://golang.org/doc/go1compat
@@ -27,6 +29,12 @@ https://yanzay.com
 * Language changes
 
 No
+
+.image gophercomplex2.jpg
+
+* Fahrenheit 451
+
+.image news.jpg
 
 * Platforms
 
@@ -53,13 +61,26 @@ Known issues:
 - 5-35% less CPU time
 - Binaries smaller by 20-30%
 
+.link https://blog.golang.org/go1.7-binary-size
+
 * Compiler
 
-.image ethereum.jpg-large _ 500
+Twit about Ethereum project
+
+.image ethereum.jpg-large 500 _
+
+* Compile time
+
+.image compile-time.png _ 900
+
+* Binary size
+
+.image binary-size.png _ 900
 
 * Cgo
 
 Fortran support
+.image fortran.jpeg 500 _
 
 * Go command
 
@@ -162,15 +183,36 @@ Integration with:
 
   net/http/httptrace
 
+Available mechanism to trace the events within HTTP client requests
+
 * Testing
 
 - Sub-tests and sub-benchmarks
 - TestMain
 
+* Sub-tests
+
+.code subtest.go
+
+* TestMain
+
 .code testmain.go
+
+* Han
+
+.image gophertraining.png
 
 * Han
 
 .play han.go
 
 Also some troubles with SSA
+.link https://github.com/golang/go/issues/16733
+.link https://github.com/golang/go/issues/16726
+
+Waiting for [[https://github.com/golang/go/milestone/44][Go 1.7.1]]
+
+* Let's get drunk!
+
+.image drink.jpeg 500 _
+
